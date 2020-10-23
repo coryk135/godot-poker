@@ -167,7 +167,7 @@ func _on_Shuffel_Deck_pressed():
 	deck.shuffle()
 	broadcast_update_clients()
 
-func _on_Deal_pressed():
+func _on_Deal_All_pressed():
 	if !my_info.host: return
 	for i in player_ids():
 		deal_one_card(i)
@@ -211,3 +211,4 @@ func _on_Deal_1_P3_pressed():
 func _on_Deal_1_P4_pressed():
 	deal_one_card(3)
 	broadcast_update_clients()
+

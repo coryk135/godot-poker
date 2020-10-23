@@ -86,11 +86,20 @@ __meta__ = {
 }
 
 [node name="Game" type="Panel" parent="."]
-visible = false
-margin_left = -253.0
+margin_left = -253.794
 margin_top = -163.0
-margin_right = 255.0
+margin_right = 254.206
 margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NumPlayers" type="Label" parent="Game"]
+margin_left = 7.16376
+margin_top = 11.1118
+margin_right = 47.1638
+margin_bottom = 25.1118
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -240,7 +249,7 @@ margin_left = 5.36
 margin_top = 6.98241
 margin_right = 73.36
 margin_bottom = 20.9824
-text = "P2"
+text = "P4"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -254,5 +263,78 @@ text = "[]"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="DealerButtons" type="Node2D" parent="Game"]
+
+[node name="Deal 1 P1" type="Button" parent="Game/DealerButtons"]
+margin_left = 167.884
+margin_top = 264.042
+margin_right = 208.884
+margin_bottom = 284.042
+text = "Deal"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Deal 1 P2" type="Button" parent="Game/DealerButtons"]
+margin_left = 11.4773
+margin_top = 204.338
+margin_right = 52.4773
+margin_bottom = 224.338
+text = "Deal"
+
+[node name="Deal 1 P3" type="Button" parent="Game/DealerButtons"]
+margin_left = 168.725
+margin_top = 31.1132
+margin_right = 209.725
+margin_bottom = 51.1132
+text = "Deal"
+
+[node name="Deal 1 P4" type="Button" parent="Game/DealerButtons"]
+margin_left = 453.089
+margin_top = 92.9492
+margin_right = 494.089
+margin_bottom = 112.949
+text = "Deal"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shuffel Deck" type="Button" parent="Game/DealerButtons"]
+margin_left = 145.134
+margin_top = 313.598
+margin_right = 236.134
+margin_bottom = 333.598
+text = "Shuffel Deck"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Deal All" type="Button" parent="Game/DealerButtons"]
+margin_left = 272.919
+margin_top = 314.392
+margin_right = 334.919
+margin_bottom = 334.392
+text = "Deal All"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="Game/DealerButtons"]
+margin_left = 383.244
+margin_top = 338.996
+margin_right = 445.244
+margin_bottom = 358.996
+text = "Reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="LobbyMenu/Host" to="Lobby" method="_on_Host_pressed"]
 [connection signal="pressed" from="LobbyMenu/Join" to="Lobby" method="_on_Join_pressed"]
+[connection signal="pressed" from="Game/DealerButtons/Deal 1 P1" to="Lobby" method="_on_Deal_1_P1_pressed"]
+[connection signal="pressed" from="Game/DealerButtons/Deal 1 P2" to="Lobby" method="_on_Deal_1_P2_pressed"]
+[connection signal="pressed" from="Game/DealerButtons/Deal 1 P3" to="Lobby" method="_on_Deal_1_P3_pressed"]
+[connection signal="pressed" from="Game/DealerButtons/Deal 1 P4" to="Lobby" method="_on_Deal_1_P4_pressed"]
+[connection signal="pressed" from="Game/DealerButtons/Shuffel Deck" to="Lobby" method="_on_Shuffel_Deck_pressed"]
+[connection signal="pressed" from="Game/DealerButtons/Deal All" to="Lobby" method="_on_Deal_All_pressed"]
+[connection signal="pressed" from="Game/DealerButtons/Reset" to="Lobby" method="_on_Reset_pressed"]
